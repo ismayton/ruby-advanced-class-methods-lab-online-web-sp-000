@@ -4,8 +4,9 @@ class Song
   attr_accessor :name, :artist_name
   @@all = []
   
-  def initialize(name)
+  def initialize(name, artist_name)
     @name = name
+    @artist_name = artist_name
   end
   
   def self.all
@@ -55,7 +56,8 @@ class Song
     @@all.sort_by {|song| song.name}
   end 
   
-  def self.new_from_filename(filename) 
+  def self.new_from_filename(filename)
+    song = self.new(name, artist_name)
   end 
   
   def self.create_from_filename(filename)
