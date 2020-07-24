@@ -58,9 +58,9 @@ class Song
   def self.new_from_filename(filename)
     without_mp3 = csv_data.split(".")
     artist_and_song = row.split(" - ")
-    artist_name = artist_and_song[0]
+    @artist_name = artist_and_song[0]
     name = artist_and_song[1]
-    song = self.new(name, artist_name)
+    song = self.create_by_name(name)
   end 
   
   def self.create_from_filename(filename)
