@@ -28,7 +28,6 @@ class Song
   def self.create_by_name(name)
     song = self.new(name)
     @@all << song
-    binding.pry
   end
   
   def self.find_by_name(name) 
