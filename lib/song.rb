@@ -56,13 +56,12 @@ class Song
   end 
   
   def self.new_from_filename(filename)
-    without_mp3 = csv_data.split(".")
-    artist_and_song = row.split(" - ")
+    without_mp3 = filename.split(".")
+    artist_and_song = without_mp3.split(" - ")
     @artist_name = artist_and_song[0]
     name = artist_and_song[1]
         binding.pry
 
-    song = self.create_by_name(name)
   end 
   
   def self.create_from_filename(filename)
