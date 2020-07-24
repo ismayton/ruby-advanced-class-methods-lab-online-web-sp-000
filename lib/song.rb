@@ -51,7 +51,8 @@ class Song
   end 
   
   def self.alphabetical 
-    @@all.sort 
+    array = @@all 
+    array.sort
   end 
   
   def self.new_from_filename(filename) 
