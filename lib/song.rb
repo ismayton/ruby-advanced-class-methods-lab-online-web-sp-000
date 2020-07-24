@@ -6,7 +6,6 @@ class Song
   
   def initialize(name)
     @name = name
-    save
   end
   
   def self.all
@@ -28,7 +27,7 @@ class Song
 
   def self.create_by_name(name)
     song = self.new(name)
-    @@all << song
+      @@all << song
     binding.pry
   end
   
