@@ -56,7 +56,6 @@ class Song
   end 
   
   def self.new_from_filename(filename)
-    file = filename.join
     without_mp3 = file.split(".mp3")
     artist_and_song = without_mp3.split(" - ")
     artist_name = artist_and_song[0]
