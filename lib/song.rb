@@ -60,8 +60,9 @@ class Song
     artist_and_song = row.split(" - ")
     @artist_name = artist_and_song[0]
     name = artist_and_song[1]
+        binding.pry
+
     song = self.create_by_name(name)
-    binding.pry
   end 
   
   def self.create_from_filename(filename)
