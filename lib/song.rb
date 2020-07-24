@@ -58,14 +58,21 @@ class Song
   
   def self.new_from_filename(filename)
     rows = csv_data.split(".")
-    people = rows.collect do |row|
+    data = rows.collect do |row|
     data = row.split(" - ")
-    name = data[0]
-    age = data[1]
+    artist_name = data[0]
+    name = data[1]
     song = self.new(name, artist_name)
   end 
   
   def self.create_from_filename(filename)
+    rows = csv_data.split(".")
+    data = rows.collect do |row|
+    data = row.split(" - ")
+    artist_name = data[0]
+    name = data[1]
+    song = self.new(name, artist_name)
+    song
   end 
   
   def self.destroy_all 
