@@ -57,8 +57,8 @@ class Song
   
   def self.new_from_filename(filename)
     without_mp3 = filename.split(".mp3")
-    without_mp3.join
-    artist_and_song = without_mp3.split(" - ")
+    string = without_mp3.join
+    artist_and_song = string.split(" - ")
     artist_name = artist_and_song[0]
     name = artist_and_song[1]
         binding.pry
